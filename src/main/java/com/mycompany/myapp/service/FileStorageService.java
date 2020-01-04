@@ -25,7 +25,8 @@ public class FileStorageService {
     public FileStorageService() {
 //        this.fileStorageLocation = Paths.get(fileStorageProperties.getUploadDir())
 //            .toAbsolutePath().normalize();
-        this.fileStorageLocation = Paths.get("/Users/qk/demo");
+//        this.fileStorageLocation = Paths.get("/Users/qk/demo");
+        this.fileStorageLocation = Paths.get("/tmp");
 
 
         try {
