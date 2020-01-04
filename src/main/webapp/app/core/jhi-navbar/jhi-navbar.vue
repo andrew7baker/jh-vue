@@ -6,7 +6,7 @@
             </b-navbar-toggle>
             <b-navbar-brand class="logo float-left" b-link to="/">
                 <span class="logo-img"></span>
-                <span class="navbar-title">vsmt</span> <span class="navbar-version">{{version}}</span>
+                <span class="navbar-title">wsmt</span> <span class="navbar-version">{{version}}</span>
             </b-navbar-brand>
         </div>
         <b-collapse is-nav id="header-tabs">
@@ -40,6 +40,10 @@
                     <b-dropdown-item to="/admin/user-management">
                         <font-awesome-icon icon="user" />
                         <span>User management</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/admin/jhi-tracker">
+                        <font-awesome-icon icon="eye" />
+                        <span>User tracker</span>
                     </b-dropdown-item>
                     <b-dropdown-item  to="/admin/jhi-metrics">
                         <font-awesome-icon icon="tachometer-alt" />

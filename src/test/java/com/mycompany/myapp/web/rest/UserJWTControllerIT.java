@@ -1,6 +1,6 @@
 package com.mycompany.myapp.web.rest;
 
-import com.mycompany.myapp.VsmtApp;
+import com.mycompany.myapp.WsmtApp;
 import com.mycompany.myapp.domain.User;
 import com.mycompany.myapp.repository.UserRepository;
 import com.mycompany.myapp.security.jwt.TokenProvider;
@@ -27,7 +27,7 @@ import static org.hamcrest.Matchers.not;
 /**
  * Integration tests for the {@link UserJWTController} REST controller.
  */
-@SpringBootTest(classes = VsmtApp.class)
+@SpringBootTest(classes = WsmtApp.class)
 public class UserJWTControllerIT {
 
     @Autowired

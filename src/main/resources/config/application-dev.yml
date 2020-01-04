@@ -37,8 +37,8 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/db/vsmt;DB_CLOSE_DELAY=-1
-    username: vsmt
+    url: jdbc:h2:file:./target/h2db/db/wsmt;DB_CLOSE_DELAY=-1
+    username: wsmt
     password:
     hikari:
       poolName: Hikari
@@ -53,7 +53,7 @@ spring:
     properties:
       hibernate.id.new_generator_mappings: true
       hibernate.connection.provider_disables_autocommit: true
-      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_second_level_cache: true
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
   liquibase:
@@ -95,7 +95,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: NGE4N2Y0MWE0MmI2YzU2Mzk4MTcxMjIxODc1NDBkY2JlMDNjNDIzZTVmNzJiMmYxZmI5YTU0YmFkZGM3ZjIxMWIxZmFhZTE5MDg3Yzg4NGQ0ZTI3ZmQ0MDYyZWRjNzQxMTk5YjEzYjAwYWFlOGFlNjM1MjUzNjMzMWNmMmU1NjM=
+        base64-secret: ZGNkMmYxMDA4NDA1N2VhNTY2Yzk5NWQ3OWJhYWFmODAxOWI3ZTRiOWU5OGRkYzRkMzRhZWM4ZjcwYzg1ZTQ4YWE2MzNlNTM2MzEzMjdhMjJmMWU2NDE4OGJkNzFhOTJiNzgwNTM3NzYzYWFjZjhmMGUwMzJmNGE1YjkzMmQyODg=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

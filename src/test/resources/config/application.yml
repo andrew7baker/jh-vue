@@ -15,10 +15,10 @@
 
 spring:
   application:
-    name: vsmt
+    name: wsmt
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:vsmt;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:wsmt;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name:
     username:
     password:
@@ -55,13 +55,13 @@ spring:
       enabled: false
   task:
     execution:
-      thread-name-prefix: vsmt-task-
+      thread-name-prefix: wsmt-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: vsmt-scheduling-
+      thread-name-prefix: wsmt-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -79,7 +79,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'vsmtApp'
+    name: 'wsmtApp'
   logging:
     # To test json console appender
     use-json-format: true # By default, logs are in Json format
@@ -95,7 +95,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: NGE4N2Y0MWE0MmI2YzU2Mzk4MTcxMjIxODc1NDBkY2JlMDNjNDIzZTVmNzJiMmYxZmI5YTU0YmFkZGM3ZjIxMWIxZmFhZTE5MDg3Yzg4NGQ0ZTI3ZmQ0MDYyZWRjNzQxMTk5YjEzYjAwYWFlOGFlNjM1MjUzNjMzMWNmMmU1NjM=
+        base64-secret: ZGNkMmYxMDA4NDA1N2VhNTY2Yzk5NWQ3OWJhYWFmODAxOWI3ZTRiOWU5OGRkYzRkMzRhZWM4ZjcwYzg1ZTQ4YWE2MzNlNTM2MzEzMjdhMjJmMWU2NDE4OGJkNzFhOTJiNzgwNTM3NzYzYWFjZjhmMGUwMzJmNGE1YjkzMmQyODg=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
   metrics:

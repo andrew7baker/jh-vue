@@ -1,6 +1,6 @@
 package com.mycompany.myapp.service.mapper;
 
-import com.mycompany.myapp.VsmtApp;
+import com.mycompany.myapp.WsmtApp;
 import com.mycompany.myapp.domain.User;
 import com.mycompany.myapp.service.dto.UserDTO;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Integration tests for {@link UserMapper}.
  */
-@SpringBootTest(classes = VsmtApp.class)
+@SpringBootTest(classes = WsmtApp.class)
 public class UserMapperIT {
 
     private static final String DEFAULT_LOGIN = "johndoe";

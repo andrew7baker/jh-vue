@@ -1,6 +1,6 @@
 package com.mycompany.myapp.service;
 
-import com.mycompany.myapp.VsmtApp;
+import com.mycompany.myapp.WsmtApp;
 import com.mycompany.myapp.config.Constants;
 import com.mycompany.myapp.domain.User;
 import com.mycompany.myapp.repository.UserRepository;
@@ -31,7 +31,7 @@ import static org.mockito.Mockito.when;
 /**
  * Integration tests for {@link UserService}.
  */
-@SpringBootTest(classes = VsmtApp.class)
+@SpringBootTest(classes = WsmtApp.class)
 @Transactional
 public class UserServiceIT {
 

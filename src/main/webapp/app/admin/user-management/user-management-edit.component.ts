@@ -106,6 +106,6 @@ export default class JhiUserManagementEdit extends Vue {
   }
 
   private getMessageFromHeader(res: any): any {
-    return res.headers['x-vsmtapp-alert'];
+    return res.headers['x-wsmtapp-alert'];
   }
 }

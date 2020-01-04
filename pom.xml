@@ -4,25 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany.myapp</groupId>
-    <artifactId>vsmt</artifactId>
+    <artifactId>wsmt</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Vsmt</name>
+    <name>Wsmt</name>
 
     <repositories>
         <!-- jhipster-needle-maven-repository -->
-        <repository>
-            <id>maven-ali</id>
-            <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-                <checksumPolicy>fail</checksumPolicy>
-            </snapshots>
-        </repository>
     </repositories>
 
     <pluginRepositories>
@@ -196,6 +184,10 @@
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jcache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
             <artifactId>hibernate-jpamodelgen</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -309,6 +301,10 @@
             <artifactId>problem-spring-web</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
         </dependency>
@@ -338,6 +334,10 @@
         <dependency>
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-messaging</artifactId>
         </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
     </dependencies>
@@ -588,7 +588,7 @@
                             <image>adoptopenjdk:11-jre-hotspot</image>
                         </from>
                         <to>
-                            <image>vsmt:latest</image>
+                            <image>wsmt:latest</image>
                         </to>
                         <container>
                             <entrypoint>
@@ -615,9 +615,9 @@
                         <changeLogFile>${project.basedir}/src/main/resources/config/liquibase/master.xml</changeLogFile>
                         <diffChangeLogFile>${project.basedir}/src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                         <driver>org.h2.Driver</driver>
-                        <url>jdbc:h2:file:${project.build.directory}/h2db/db/vsmt</url>
+                        <url>jdbc:h2:file:${project.build.directory}/h2db/db/wsmt</url>
                         <defaultSchemaName></defaultSchemaName>
-                        <username>vsmt</username>
+                        <username>wsmt</username>
                         <password></password>
                         <referenceUrl>hibernate:spring:com.mycompany.myapp.domain?dialect=org.hibernate.dialect.H2Dialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</referenceUrl>
                         <verbose>true</verbose>

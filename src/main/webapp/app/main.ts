@@ -24,6 +24,7 @@ import '../content/scss/vendor.scss';
 import AlertService from '@/shared/alert/alert.service';
 import ConfigurationService from '@/admin/configuration/configuration.service';
 
+import TrackerService from './admin/tracker/tracker.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 Vue.config.productionTip = false;
@@ -37,8 +38,9 @@ Vue.component('jhi-item-count', JhiItemCountComponent);
 const store = config.initVueXStore(Vue);
 
 const alertService = new AlertService(store);
+const trackerService = new TrackerService(router);
 const loginService = new LoginService();
-const accountService = new AccountService(store, router);
+const accountService = new AccountService(store, trackerService, router);
 
 router.beforeEach((to, from, next) => {
   if (!to.matched.length) {
@@ -77,6 +79,7 @@ new Vue({
     configurationService: () => new ConfigurationService(),
     logsService: () => new LogsService(),
     metricsService: () => new MetricsService(),
+    trackerService: () => trackerService,
     alertService: () => alertService,
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService

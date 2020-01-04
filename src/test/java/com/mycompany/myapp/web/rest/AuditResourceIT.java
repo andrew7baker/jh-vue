@@ -1,6 +1,6 @@
 package com.mycompany.myapp.web.rest;
 
-import com.mycompany.myapp.VsmtApp;
+import com.mycompany.myapp.WsmtApp;
 import io.github.jhipster.config.JHipsterProperties;
 import com.mycompany.myapp.config.audit.AuditEventConverter;
 import com.mycompany.myapp.domain.PersistentAuditEvent;
@@ -31,7 +31,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link AuditResource} REST controller.
  */
-@SpringBootTest(classes = VsmtApp.class)
+@SpringBootTest(classes = WsmtApp.class)
 @Transactional
 public class AuditResourceIT {
 

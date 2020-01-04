@@ -82,7 +82,7 @@ export default class JhiUserManagementComponent extends mixins(Vue2Filters.mixin
     this.userManagementService()
       .remove(this.removeId)
       .then(res => {
-        const message = res.headers['x-vsmtapp-alert'];
+        const message = res.headers['x-wsmtapp-alert'];
         this.alertService().showAlert(message, 'danger');
         this.getAlertFromStore();
         this.removeId = null;
